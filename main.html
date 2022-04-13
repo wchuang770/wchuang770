@@ -52,39 +52,45 @@
     </h2>
 
    <!-- 输入组件 -->
-    <div class="card border-dark mb-3" style="max-width: 24rem; height: 15rem; float: left;margin-left: 5%;margin-right: 5%;">
+    <div class="card border-dark mb-3" style="width: 24rem; height: 14rem; float: left;margin-left: 5%;margin-right: 5%;">
       <div class="card-header bg-transparent border-dark">
         <h4>Input</h4>
       </div>
       <div class="card-body text-secondary">
           <h5 class="card-title">one sentence test<br></h5>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="input a sentence" aria-label="Recipient's username" aria-describedby="button-addon2">
-            <button class="btn btn-outline-primary" type="button" id="button-addon2">Submit</button>
+            <form action = "http://127.0.0.1:5000/text_input" method="post" enctype="multipart/form-data">
+            <input type="text" name="textinput" class="form-control" style="float: left; width:17rem; margin-left:auto;margin-right:auto" placeholder="input a sentence" aria-label="input a sentence" aria-describedby="button-addon2">
+            <input type="submit" class="form-control" style="width:auto" value="submit" id="button-addon2"/>
+            <!-- <button class="btn btn-outline-primary" type="button" id="button-addon2">Submit</button> -->
+            </form>
           </div>
       </div>
       <div class="card-footer bg-transparent border-secondary">
           <div class="input-group" style="max-width: 24rem;">
-            <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-            <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon04">Submit</button>
+            <form action = "http://127.0.0.1:5000/file_upload" method = "post" enctype = "multipart/form-data">
+            <input type="file" class="form-control" style="float: left; width: 17rem; margin-left: auto; margin-right: auto;" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+            <input type="submit" class="form-control" id="inputGroupFile04" value="submit" style="width: auto">
+            <!-- <button class="btn btn-outline-primary" type="button" id="inputGroupFileAddon04">Submit</button> -->
+            </form>
           </div>
       </div>
     </div>
 
     <!-- 输出组件 -->
-    <div class="card border-info mb-3" style="max-width: 39rem; height: 24rem; ">
+    <div class="card border-primary mb-3" style="max-width: 39rem; height: 22rem; ">
       <div class="card-header">
         <h4>Output</h4>
       </div>
       <div class="card-body">
         <p class="card-text">
-          
+         {{a}}
         </p>
       </div>
     </div>
 
     <!-- 进度条 -->
-    <div class="progress" style="max-width: 24rem;">
+    <div class="progress" style="max-width: 24rem; float: left; margin-left: auto; margin-right: auto;">
       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
     </div>
 
